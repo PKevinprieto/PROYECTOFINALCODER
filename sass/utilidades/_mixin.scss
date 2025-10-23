@@ -1,0 +1,30 @@
+@mixin imagenes($height, $widht){
+    height: $height;
+    width: $widht;
+}
+@mixin flex($justify-content){
+    display: flex;
+    justify-content:$justify-content;
+    align-items: center;
+}
+@mixin tamaños($height, $widht){
+    height: $height;
+    width: $widht;
+}
+@mixin grid($columns, $rows, $gap){
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    gap: $gap;
+}
+@mixin margenes ($bottom, $top, $right, $left){
+    margin-bottom:$bottom;
+    margin-top: $top;
+    margin-right: $right;
+    margin-left: $left;
+}
+@mixin padding ($padding){
+    padding: $padding;
+}

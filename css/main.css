@@ -1,0 +1,806 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.inicio header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: black;
+}
+.inicio header img {
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
+}
+.inicio header nav {
+  border: 2px outset lightblue;
+  border-radius: 10px;
+  background-color: white;
+  height: 70%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inicio header nav div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.inicio header nav ul {
+  gap: 5rem;
+}
+.inicio header nav li {
+  font-size: 30px;
+}
+.inicio .nav-link {
+  color: grey;
+}
+.inicio main {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 10% 78.96% 10%;
+  grid-template-rows: repeat(2, fit-content);
+  gap: 1.04%;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 174);
+  justify-content: center;
+  align-content: center;
+}
+.inicio main section {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(2, fit-content);
+  gap: 1px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 100%;
+  width: 100%;
+  background-image: url(../imagenes/fondo-pizza.jfif);
+  border: 3px black outset;
+  border-radius: 10px;
+}
+.inicio main section img {
+  border: 5px outset rgb(255, 248, 157);
+  border-radius: 100%;
+  height: 80%;
+  width: 80%;
+}
+.inicio main section p {
+  padding: 10px;
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 3px 5px 9px white;
+}
+.inicio .columna {
+  height: 46%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: start;
+  overflow: hidden;
+  animation: boton-parpadeo 1s infinite alternate;
+  transition: transform 0.2s;
+}
+.inicio .columna:hover {
+  animation-play-state: paused;
+  transform: scale(1.05);
+}
+.inicio .columna h2 {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: 40px;
+  height: 100%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+}
+.inicio .columna .boton-clickable h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+}
+@keyframes boton-parpadeo {
+  0% {
+    transform: scale(1);
+    box-shadow: 10px 15px 90px rgb(133, 133, 133);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 10px 15px 90px rgb(112, 112, 112);
+  }
+}
+.inicio footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+@media (max-width: 992px) {
+  .inicio main {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 90%;
+    grid-template-rows: repeat(2, fit-content);
+    gap: 1px;
+    justify-content: center;
+    align-content: center;
+  }
+  .inicio main section {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, fit-content);
+    gap: 1px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 100%;
+    width: 100%;
+  }
+  .inicio main section img {
+    height: 90%;
+    width: 90%;
+  }
+  .inicio main section p {
+    font-size: 28px;
+  }
+  .inicio .columna {
+    animation: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+    height: 40%;
+    width: 70%;
+  }
+  .inicio .columna h2 {
+    font-size: 35px;
+  }
+  .inicio .navbar-collapse {
+    background-color: black;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+  .inicio .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  .inicio .navbar-collapse .nav-item {
+    width: 100%;
+  }
+  .inicio .navbar-collapse .nav-item .nav-link {
+    color: white !important;
+    padding: 12px 0;
+    text-align: center;
+  }
+  .inicio .navbar-collapse .nav-item .nav-link:hover {
+    background-color: white;
+    color: black !important;
+  }
+  .inicio header {
+    position: relative;
+  }
+  .inicio header img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 576px) {
+  .inicio main {
+    display: grid;
+    grid-template-areas: "pizza canasta" "caja caja";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+  }
+  .inicio .columna:first-of-type {
+    grid-area: pizza;
+  }
+  .inicio .caja {
+    grid-area: caja;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inicio .columna:last-of-type {
+    grid-area: canasta;
+  }
+  .inicio section {
+    height: 150px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 0;
+    margin-right: 10px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .inicio section img {
+    height: 80%;
+    width: 80%;
+  }
+  .inicio section h2 {
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+    font-size: 22px;
+    text-align: center;
+  }
+  .inicio .columna {
+    animation: none;
+    transform: none;
+    box-shadow: none;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .inicio .columna h2 {
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+    font-size: 22px;
+  }
+}
+
+.canastas header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: black;
+}
+.canastas header img {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+}
+.canastas header nav {
+  border: 2px outset lightblue;
+  border-radius: 10px;
+  background-color: white;
+  height: 70%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.canastas header nav div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.canastas header nav ul {
+  gap: 5rem;
+}
+.canastas header nav li {
+  font-size: 30px;
+}
+.canastas main {
+  background-color: rgb(255, 255, 174);
+}
+.canastas main section {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 45%);
+  grid-template-rows: repeat(2, 45%);
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+}
+.canastas main section div {
+  position: relative;
+  background-image: url(../imagenes/fondo-pizza.jfif);
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 80% 20%;
+  gap: 1px;
+  border: 4px outset rgb(255, 187, 0);
+  text-align: center;
+  font-size: 25px;
+}
+.canastas main section div img {
+  height: 100%;
+  width: 100%;
+  border: 8px solid white;
+  box-shadow: 3px 2px 9px black;
+}
+.canastas main section div p {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgb(253, 204, 139);
+  padding: 10px;
+  border-radius: 5px;
+}
+.canastas main section div h4 {
+  height: 40%;
+  width: 30%;
+  text-decoration: line-through;
+  background-color: rgba(255, 0, 0, 0.8);
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 100%;
+}
+.canastas main section div h2 {
+  height: 60%;
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 100%;
+  font-size: 2rem;
+  color: #ff9900;
+  font-weight: 800;
+  text-shadow: 1px 2px 0.5px rgba(255, 255, 255, 0.3);
+}
+.canastas main section div .btn-pedir {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  padding: 8px 16px;
+  background-color: rgb(0, 128, 0);
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.canastas main section div .btn-pedir:hover {
+  background-color: rgb(25.5, 25.5, 25.5);
+}
+.canastas main section div .descuento {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #000;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border: 4px inset green;
+  border-radius: 4px;
+}
+.canastas footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .canastas header {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+  }
+  .canastas header img {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 8px;
+  }
+  .canastas header nav {
+    width: 100%;
+  }
+  .canastas header nav div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .canastas header nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .canastas header nav li {
+    font-size: 18px;
+  }
+  .canastas main section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .canastas main section div {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    background-color: transparent;
+  }
+  .canastas main section div img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .canastas main section div p {
+    font-size: 20px;
+  }
+  .canastas main section div h4 {
+    font-size: 1rem;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+  }
+  .canastas main section div h2 {
+    font-size: 1.4rem;
+    color: #ff9900;
+  }
+  .canastas main section div .btn-pedir {
+    position: static;
+    margin-top: 10px;
+  }
+  .canastas main section div .descuento {
+    font-size: 12px;
+  }
+  .canastas footer {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .canastas header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding: 24px;
+  }
+  .canastas header img {
+    height: 110px;
+    width: 110px;
+    margin-bottom: 12px;
+  }
+  .canastas header nav {
+    width: 96%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 14px;
+    padding: 12px 16px;
+  }
+  .canastas header nav ul {
+    gap: 8rem;
+  }
+  .canastas header nav ul li {
+    font-size: 40px;
+  }
+  .canastas main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    padding: 36px;
+  }
+  .canastas main section div {
+    width: 88%;
+    max-width: 720px;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
+  .canastas main section div img {
+    height: 380px;
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 14px;
+  }
+  .canastas main section div p {
+    font-size: 35px;
+  }
+  .canastas main section div h4 {
+    font-size: 1.4rem;
+  }
+  .canastas main section div h2 {
+    font-size: 2rem;
+  }
+  .canastas main section div .btn-pedir {
+    margin-top: 12px;
+    padding: 12px 22px;
+    font-size: 25px;
+  }
+  .canastas main section div .descuento {
+    font-size: 20px;
+  }
+  .canastas footer {
+    font-size: 17px;
+    padding: 14px;
+  }
+}
+
+.pedilo body, .pedilo html {
+  overflow-x: hidden;
+  width: 100%;
+}
+.pedilo header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: black;
+}
+.pedilo header img {
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
+}
+.pedilo header nav {
+  border: 2px outset lightblue;
+  border-radius: 10px;
+  background-color: white;
+  height: 70%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pedilo header nav div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.pedilo header nav ul {
+  gap: 5rem;
+}
+.pedilo header nav li {
+  font-size: 30px;
+}
+.pedilo .nav-link {
+  color: grey;
+}
+.pedilo main {
+  background-color: rgb(255, 255, 174);
+}
+.pedilo main section {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-image: url(../imagenes/fondo-pizza.jfif);
+}
+.pedilo main section div {
+  background-color: black;
+  height: 200px;
+  width: 100%;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.pedilo main section form {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: fit-content;
+  gap: 2px;
+  background-image: url(../imagenes/fondo-pizza.jfif);
+  overflow: hidden;
+  padding-top: 50px;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  justify-self: center;
+}
+.pedilo main section .metodo-pago {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  justify-items: center;
+  align-content: center;
+}
+.pedilo main section .btn-enviar {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(25, 255, 25);
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 5px 10px black;
+}
+.pedilo footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 576px) {
+  .pedilo header nav .navbar-collapse {
+    background-color: black;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+  .pedilo header nav .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  .pedilo header nav .navbar-collapse .nav-item {
+    width: 100%;
+  }
+  .pedilo header nav .navbar-collapse .nav-item .nav-link {
+    color: white !important;
+    padding: 12px 0;
+    text-align: center;
+  }
+  .pedilo header nav .navbar-collapse .nav-item .nav-link:hover {
+    background-color: white;
+    color: black !important;
+  }
+  .pedilo main section div {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .pedilo main section form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+  }
+  .pedilo main section .metodo-pago {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .pedilo main section .btn-enviar {
+    width: 100%;
+    font-size: 30px;
+    padding: 15px;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  header nav .navbar-collapse {
+    background-color: black !important;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  header nav .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  header nav .navbar-collapse .nav-item {
+    width: 100%;
+  }
+  header nav .navbar-collapse .nav-item .nav-link {
+    color: white !important;
+    padding: 14px 0;
+    text-align: center;
+  }
+  header nav .navbar-collapse .nav-item .nav-link:hover {
+    background-color: white;
+    color: black !important;
+  }
+  main section {
+    padding: 20px;
+  }
+  main section div {
+    width: 100%;
+    background-color: transparent;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  main section form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 25px;
+    font-size: 22px;
+    text-align: center;
+    color: white;
+  }
+  main section .metodo-pago {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  main section .btn-enviar {
+    width: 100%;
+    font-size: 35px;
+    padding: 18px;
+  }
+}
+/*NO PUSE COMENTARIOS DE CSS POR QUE SE ME ROMPIA EL CODIGO, NO SE POR QUE, GRACIAS!.*/
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,317 @@
+.pizzas {
+
+    //NESTIGN HEADER//
+
+    header {
+        @include flex(center);
+        @include tamaños(100px, 100%);
+        background-color: $color-principal;
+
+        img {
+            @include imagenes(60px, 60px);
+            border-radius: 100%;
+        }
+
+        nav {
+            border: 2px outset lightblue;
+            border-radius: 10px;
+            background-color: $color-secundario;
+            @include tamaños(70%, 60%);
+            @include flex(center);
+
+            div {
+                @include tamaños(100%, 100%);
+                @include flex(space-around);
+            }
+
+            ul {
+                gap: 5rem;
+            }
+
+            li {
+                font-size: 30px;
+            }
+        }
+    }
+
+    //NESTING MAIN//
+
+
+    main {
+        background-color: $color-main;
+
+        h1 {
+            font-size: 2.6rem;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            text-shadow: 2px 3px 8px rgb(255, 255, 255);
+            margin: 20px 0;
+            text-decoration: 2px underline black;
+        }
+
+        section {
+            @include grid(repeat(2, 45%), repeat(2, 45%), 20px);
+            justify-content: center;
+            align-content: center;
+            @include padding(10px);
+
+            div {
+                position: relative;
+                background-image: url(../imagenes/fondo-pizza.jfif);
+                @include padding(10px);
+                @include tamaños(100%, 100%);
+                @include margenes(10px, 10px, 10px, 10px, );
+                @include grid(50% 50%, 80% 20%, 1px);
+                border: 4px outset rgb(255, 187, 0);
+                text-align: center;
+                font-size: 25px;
+
+                img {
+                    @include imagenes(100%, 100%);
+                    border: 8px solid white;
+                    box-shadow: 3px 2px 9px black;
+                }
+
+                p {
+                    @include margenes(10px, 10px, 10px, 10px, );
+                    background-color: rgba(0, 0, 0, 0.7);
+                    color: rgb(253, 204, 139);
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+
+                h4 {
+                    @include tamaños(40%, 30%);
+                    text-decoration: line-through;
+                    background-color: rgba(255, 0, 0, 0.8);
+                    font-size: 1.5rem;
+                    color: #fff;
+                    font-weight: 500;
+                    border-radius: 100%;
+                }
+
+                h2 {
+                    @include tamaños(60%, 40%);
+                    background-color: rgba(0, 0, 0, 0.8);
+                    border-radius: 100%;
+                    font-size: 2rem;
+                    color: #ff9900;
+                    font-weight: 800;
+                    text-shadow: 1px 2px 0.5px rgba(255, 255, 255, 0.3);
+                }
+
+                .btn-pedir {
+                    position: absolute;
+                    bottom: 2px;
+                    right: 2px;
+                    padding: 8px 16px;
+                    background-color: $color-boton;
+                    color: white;
+                    border: 2px solid white;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+
+                .btn-pedir:hover {
+                    background-color: lighten($color-principal, 10%);
+                }
+
+                .descuento {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    background-color: #000;
+                    color: white;
+                    font-size: 14px;
+                    font-weight: bold;
+                    padding: 2px 6px;
+                    border: 4px inset green;
+                    border-radius: 4px;
+                    margin-top: -30px;
+                }
+            }
+        }
+    }
+
+    //FOOTER//
+
+    footer {
+        background-color: $color-principal;
+        color: white;
+        @include flex(center);
+    }
+
+
+    //MEDIA QUERIES CANASTAS//
+
+    //CELULAR//
+
+    @media screen and (max-width: 600px) {
+        header {
+            flex-direction: column;
+            @include tamaños(auto, 100%);
+            @include padding(10px);
+
+            img {
+                @include imagenes(70px, 70px);
+                margin-bottom: 8px;
+            }
+
+            nav {
+                width: 100%;
+
+                div {
+                    @include flex(center);
+                    flex-direction: column;
+                }
+
+                ul {
+                    flex-direction: column;
+                    gap: 0.8rem;
+                }
+
+                li {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        main section {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            div {
+                @include tamaños(auto, 100%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+                background-color: transparent;
+
+                img {
+                    @include imagenes(220px, 100%);
+                    object-fit: cover;
+                    border-radius: 8px;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+
+                h4 {
+                    font-size: 1rem;
+                    background-color: rgba(255, 0, 0, 0.8);
+                    color: white;
+                }
+
+                h2 {
+                    font-size: 1.4rem;
+                    color: #ff9900;
+                }
+
+                .btn-pedir {
+                    position: static;
+                    margin-top: 10px;
+                }
+
+                .descuento {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        footer {
+            font-size: 14px;
+            @include padding(10px);
+        }
+    }
+
+
+    //TABLET//
+
+    @media screen and (min-width: 601px) and (max-width: 1024px) {
+        header {
+            position: relative;
+
+            img {
+                position: absolute;
+                left: 51.5%;
+
+                transform: translateX(-50%);
+            }
+
+            nav {
+                width: 96%;
+                @include flex(center);
+                background-color: $color-secundario;
+                border-radius: 14px;
+                padding: 12px 16px;
+
+                ul {
+                    gap: 8rem;
+
+                    li {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+
+        main section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 36px;
+            @include padding(36px);
+
+            div {
+                width: 88%;
+                max-width: 720px;
+                @include padding(24px);
+                border-radius: 16px;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+
+                img {
+                    @include imagenes(380px, 100%);
+                    border-radius: 12px;
+                    margin-bottom: 14px;
+                }
+
+                p {
+                    font-size: 35px;
+                }
+
+                h4 {
+                    font-size: 1.4rem;
+                }
+
+                h2 {
+                    font-size: 2rem;
+                }
+
+                .btn-pedir {
+                    margin-top: 12px;
+                    padding: 12px 22px;
+                    font-size: 25px;
+                }
+
+                .descuento {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        footer {
+            font-size: 17px;
+            @include padding(14px);
+        }
+    }
+}
+
+//FIN//

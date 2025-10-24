@@ -1,0 +1,250 @@
+.pedilo {
+
+    //NESTING HEADER//
+    header {
+        @include flex(center);
+        @include tamaños(100px, 100%);
+        background-color: $color-principal;
+
+        img {
+            border-radius: 100%;
+            @include imagenes(60px, 60px);
+        }
+
+        nav {
+            border: 2px outset lightblue;
+            border-radius: 10px;
+            background-color: $color-secundario;
+            @include tamaños(70%, 60%);
+            @include flex(center);
+
+            div {
+                @include tamaños(100%, 100%);
+                @include flex(space-around);
+            }
+
+            ul {
+                gap: 5rem;
+            }
+
+            li {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .nav-link {
+        color: grey;
+    }
+
+    //NESTING MAIN//
+
+    main {
+        background-color: $color-main;
+
+        h1 {
+            font-size: 3rem;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            text-shadow: 2px 3px 8px rgb(255, 255, 255);
+            margin: 20px 0;
+            text-decoration: 2px underline black;
+        }
+
+        section {
+            @include margenes(10px, 10px, 10px, 10px, );
+            background-image: url(../imagenes/fondo-pizza.jfif);
+
+            div {
+                background-color: black;
+                @include tamaños(200px, 100%);
+                align-content: center;
+                @include flex(center);
+                flex-direction: column;
+            }
+
+            form {
+                @include grid(repeat(2, 1fr), fit-content, 2px);
+                background-image: url(../imagenes/fondo-pizza.jfif);
+                overflow: hidden;
+                @include padding(50px);
+                font-size: 25px;
+                text-align: center;
+                color: white;
+                justify-self: center;
+            }
+
+            .metodo-pago {
+                @include flex(center);
+                gap: 20px;
+                justify-items: center;
+                align-content: center;
+            }
+
+            .btn-enviar {
+                @include tamaños(100%, 100%);
+                @include padding(10px);
+                background-color: rgb(25, 255, 25);
+                font-size: 50px;
+                color: white;
+                text-shadow: 2px 5px 10px black;
+            }
+        }
+    }
+
+    footer {
+        @include flex(center);
+        background-color: $color-principal;
+        color: white;
+    }
+}
+
+//MEDIAQUERIES//
+
+//CELULAR//
+@media screen and (max-width: 576px) {
+    .pedilo {
+
+        header {
+            nav {
+                .navbar-collapse {
+                    background-color: black;
+                    border-radius: 0 0 10px 10px;
+                    width: 100%;
+                    height: auto;
+                    overflow: hidden;
+                    transition: height 0.3s ease;
+
+                    .navbar-nav {
+                        flex-direction: column;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    .nav-item {
+                        width: 100%;
+
+                        .nav-link {
+                            color: white !important;
+                            padding: 12px 0;
+                            text-align: center;
+
+                            &:hover {
+                                background-color: $color-secundario;
+                                color: black !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+            section {
+                div {
+                    width: 100%;
+                    flex-direction: column;
+                    gap: 15px;
+                    align-items: center;
+                }
+
+                form {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 15px;
+                    width: 100%;
+                    padding: 20px;
+                    font-size: 20px;
+                    text-align: center;
+                    color: white;
+                }
+
+                .metodo-pago {
+                    flex-direction: column;
+                    gap: 10px;
+                    align-items: center;
+                }
+
+                .btn-enviar {
+                    width: 100%;
+                    font-size: 30px;
+                    padding: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+//TABLET//
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+    header {
+       position: relative;
+
+            img {
+                position: absolute;
+                left: 47%;
+
+                transform: translateX(-50%);
+            }
+
+         nav {
+        width: 96% !important;
+        @include flex(center);
+        background-color: $color-secundario;
+        border-radius: 14px;
+        padding: 12px 16px;
+
+        ul {
+          gap: 8rem !important;
+
+          li {
+            font-size: 40px !important;
+          }
+        }
+      }
+    }
+
+    main {
+        section {
+            padding: 20px;
+
+            div {
+                width: 100%;
+                background-color: transparent;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            form {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+                width: 80%;
+                margin: 0 auto;
+                padding: 25px;
+                font-size: 22px;
+                text-align: center;
+                color: white;
+            }
+
+            .metodo-pago {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                align-items: center;
+            }
+
+            .btn-enviar {
+                width: 100%;
+                font-size: 35px;
+                padding: 18px;
+            }
+        }
+    }
+}
+
+//FIN///*  */

@@ -1,95 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HACÉ TU PEDIDO</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- BOOTSTRAP -->
+  <!-- SEO -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta name="description"
+    content="Realizá tu pedido online de pizzas y canastas gourmet de forma rápida y sencilla. Recibí tu comida en la puerta de tu casa.">
+  <meta name="keywords" content="pedido online, delivery, pizzas, canastas gourmet, Pizzería D10, comida a domicilio">
+  <meta name="author" content="Pizzería D10">
 
-        <!-- CSS -->
+  <!-- TITULO -->
 
-    <link rel="stylesheet" href="../css/main.css">
+  <title>Hacé tu Pedido - Pizzería D10</title>
+
+  <!-- BOOTSTRAP -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="../css/main.css">
 </head>
+
 <body class="pedilo">
 
-      <!-- HEADER Y MENU HAMBURGUESA -->
+  <!-- HEADER Y MENU HAMBURGUESA -->
 
-    <header>
-        <nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <img src="../imagenes/LOGO.jpg" alt="">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-                <li class="nav-item">
-          <a class="nav-link" href="../index.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="Canastas.html">Canastas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Pizzas.html">Pizzas</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-    </header>
-
-    <!-- MENU -->
-
-<main>
-
-      <!-- FORMULARIO DE PEDIDO -->
-
-  <section>
-     <form class="formulario-pedido" action="procesar_pedido.html" method="POST">
-      <div>
-        <label for="nombre">Nombre y Apellido</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Ingrese Nombre Completo" required>
-      </div>
-
-      <div>
-        <label for="direccion">Dirección</label>
-        <input type="text" id="direccion" name="direccion" placeholder="Ingrese su dirección" required>
-      </div>
-
-      <div>
-        <label>Método de Pago</label>
-        <div class="metodo-pago">
-          <label>
-            <input type="radio" name="pago" value="efectivo" required>
-            Efectivo
-          </label>
-          <label>
-            <input type="radio" name="pago" value="transferencia" required>
-            Transferencia
-          </label>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <img src="../imagenes/LOGO.jpg" alt="logo">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pizzas.html">Pizzas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pedidos.html">Pedidos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="canastas.html">Canastas</a>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
+  </header>
 
-      <button type="submit" class="btn-enviar">
-      Enviar Pedido
-      </button>
-    </form>
-  </section>
-</main>
+  <!-- MENU -->
+
+  <main>
+
+    <h1>HACÉ TU PEDIDO</h1>
+    <!-- FORMULARIO DE PEDIDO -->
+
+    <section>
+      <form class="formulario-pedido" action="procesar_pedido.html" method="POST">
+        <div>
+          <label for="nombre">Nombre y Apellido</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingrese Nombre Completo" required>
+        </div>
+
+        <div>
+          <label for="direccion">Dirección</label>
+          <input type="text" id="direccion" name="direccion" placeholder="Ingrese su dirección" required>
+        </div>
+
+        <div>
+          <label>Método de Pago</label>
+          <div class="metodo-pago">
+            <label>
+              <input type="radio" name="pago" value="efectivo" required>
+              Efectivo
+            </label>
+            <label>
+              <input type="radio" name="pago" value="transferencia" required>
+              Transferencia
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-enviar">
+          Enviar Pedido
+        </button>
+      </form>
+    </section>
+  </main>
 
 
-          <!-- SCRIPT DE BOOTSTRAP -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <!-- PIE DE PAGINA -->
 
-    <!-- PIE DE PAGINA -->
+  <footer>
+    © Todos los derechos reservados.
+  </footer>
 
-    <footer>
-       © Todos los derechos reservados.  
-    </footer>
+  <!-- SCRIPT DE BOOTSTRAP -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 
 </body>
+
 </html>

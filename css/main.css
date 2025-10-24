@@ -8,9 +8,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -58,6 +55,17 @@ main {
 }
 .inicio .nav-link {
   color: grey;
+}
+.inicio .titulo {
+  background-color: rgb(255, 255, 174);
+}
+.inicio .titulo h1 {
+  font-size: 3rem;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-shadow: 2px 3px 8px rgb(255, 255, 255);
+  margin: 20px 0;
+  text-decoration: 2px underline black;
 }
 .inicio main {
   display: grid;
@@ -162,6 +170,31 @@ main {
   color: white;
 }
 @media (max-width: 992px) {
+  .inicio header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inicio header img {
+    margin-bottom: 10px;
+    width: 60px;
+    height: 60px;
+  }
+  .inicio header nav {
+    width: 96%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .inicio header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .inicio header nav li {
+    font-size: 20px;
+  }
   .inicio main {
     display: grid;
     justify-items: center;
@@ -227,14 +260,6 @@ main {
   .inicio .navbar-collapse .nav-item .nav-link:hover {
     background-color: white;
     color: black !important;
-  }
-  .inicio header {
-    position: relative;
-  }
-  .inicio header img {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 @media (max-width: 576px) {
@@ -338,6 +363,14 @@ main {
 .canastas main {
   background-color: rgb(255, 255, 174);
 }
+.canastas main h1 {
+  font-size: 2.6rem;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-shadow: 2px 3px 8px rgb(255, 255, 255);
+  margin: 20px 0;
+  text-decoration: 2px underline black;
+}
 .canastas main section {
   display: grid;
   justify-items: center;
@@ -432,6 +465,7 @@ main {
   padding: 2px 6px;
   border: 4px inset green;
   border-radius: 4px;
+  margin-top: -30px;
 }
 .canastas footer {
   background-color: black;
@@ -517,16 +551,12 @@ main {
 }
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   .canastas header {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    width: 100%;
-    padding: 24px;
+    position: relative;
   }
   .canastas header img {
-    height: 110px;
-    width: 110px;
-    margin-bottom: 12px;
+    position: absolute;
+    left: 48%;
+    transform: translateX(-50%);
   }
   .canastas header nav {
     width: 96%;
@@ -586,10 +616,298 @@ main {
   }
 }
 
-.pedilo body, .pedilo html {
-  overflow-x: hidden;
+.pizzas header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
   width: 100%;
+  background-color: black;
 }
+.pizzas header img {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+}
+.pizzas header nav {
+  border: 2px outset lightblue;
+  border-radius: 10px;
+  background-color: white;
+  height: 70%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pizzas header nav div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.pizzas header nav ul {
+  gap: 5rem;
+}
+.pizzas header nav li {
+  font-size: 30px;
+}
+.pizzas main {
+  background-color: rgb(255, 255, 174);
+}
+.pizzas main h1 {
+  font-size: 2.6rem;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-shadow: 2px 3px 8px rgb(255, 255, 255);
+  margin: 20px 0;
+  text-decoration: 2px underline black;
+}
+.pizzas main section {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 45%);
+  grid-template-rows: repeat(2, 45%);
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+}
+.pizzas main section div {
+  position: relative;
+  background-image: url(../imagenes/fondo-pizza.jfif);
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 80% 20%;
+  gap: 1px;
+  border: 4px outset rgb(255, 187, 0);
+  text-align: center;
+  font-size: 25px;
+}
+.pizzas main section div img {
+  height: 100%;
+  width: 100%;
+  border: 8px solid white;
+  box-shadow: 3px 2px 9px black;
+}
+.pizzas main section div p {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgb(253, 204, 139);
+  padding: 10px;
+  border-radius: 5px;
+}
+.pizzas main section div h4 {
+  height: 40%;
+  width: 30%;
+  text-decoration: line-through;
+  background-color: rgba(255, 0, 0, 0.8);
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 100%;
+}
+.pizzas main section div h2 {
+  height: 60%;
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 100%;
+  font-size: 2rem;
+  color: #ff9900;
+  font-weight: 800;
+  text-shadow: 1px 2px 0.5px rgba(255, 255, 255, 0.3);
+}
+.pizzas main section div .btn-pedir {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  padding: 8px 16px;
+  background-color: rgb(0, 128, 0);
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.pizzas main section div .btn-pedir:hover {
+  background-color: rgb(25.5, 25.5, 25.5);
+}
+.pizzas main section div .descuento {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #000;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border: 4px inset green;
+  border-radius: 4px;
+  margin-top: -30px;
+}
+.pizzas footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .pizzas header {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+  }
+  .pizzas header img {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 8px;
+  }
+  .pizzas header nav {
+    width: 100%;
+  }
+  .pizzas header nav div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .pizzas header nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .pizzas header nav li {
+    font-size: 18px;
+  }
+  .pizzas main section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .pizzas main section div {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    background-color: transparent;
+  }
+  .pizzas main section div img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .pizzas main section div p {
+    font-size: 20px;
+  }
+  .pizzas main section div h4 {
+    font-size: 1rem;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+  }
+  .pizzas main section div h2 {
+    font-size: 1.4rem;
+    color: #ff9900;
+  }
+  .pizzas main section div .btn-pedir {
+    position: static;
+    margin-top: 10px;
+  }
+  .pizzas main section div .descuento {
+    font-size: 12px;
+  }
+  .pizzas footer {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .pizzas header {
+    position: relative;
+  }
+  .pizzas header img {
+    position: absolute;
+    left: 51.5%;
+    transform: translateX(-50%);
+  }
+  .pizzas header nav {
+    width: 96%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 14px;
+    padding: 12px 16px;
+  }
+  .pizzas header nav ul {
+    gap: 8rem;
+  }
+  .pizzas header nav ul li {
+    font-size: 40px;
+  }
+  .pizzas main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    padding: 36px;
+  }
+  .pizzas main section div {
+    width: 88%;
+    max-width: 720px;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
+  .pizzas main section div img {
+    height: 380px;
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 14px;
+  }
+  .pizzas main section div p {
+    font-size: 35px;
+  }
+  .pizzas main section div h4 {
+    font-size: 1.4rem;
+  }
+  .pizzas main section div h2 {
+    font-size: 2rem;
+  }
+  .pizzas main section div .btn-pedir {
+    margin-top: 12px;
+    padding: 12px 22px;
+    font-size: 25px;
+  }
+  .pizzas main section div .descuento {
+    font-size: 20px;
+  }
+  .pizzas footer {
+    font-size: 17px;
+    padding: 14px;
+  }
+}
+
 .pedilo header {
   display: flex;
   justify-content: center;
@@ -632,6 +950,14 @@ main {
 .pedilo main {
   background-color: rgb(255, 255, 174);
 }
+.pedilo main h1 {
+  font-size: 3rem;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-shadow: 2px 3px 8px rgb(255, 255, 255);
+  margin: 20px 0;
+  text-decoration: 2px underline black;
+}
 .pedilo main section {
   margin-bottom: 10px;
   margin-top: 10px;
@@ -648,7 +974,6 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
 }
 .pedilo main section form {
   display: grid;
@@ -659,7 +984,7 @@ main {
   gap: 2px;
   background-image: url(../imagenes/fondo-pizza.jfif);
   overflow: hidden;
-  padding-top: 50px;
+  padding: 50px;
   font-size: 25px;
   text-align: center;
   color: white;
@@ -743,30 +1068,29 @@ main {
     padding: 15px;
   }
 }
-@media screen and (min-width: 577px) and (max-width: 992px) {
-  header nav .navbar-collapse {
-    background-color: black !important;
-    border-radius: 0 0 10px 10px;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  header {
+    position: relative;
   }
-  header nav .navbar-collapse .navbar-nav {
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
+  header img {
+    position: absolute;
+    left: 47%;
+    transform: translateX(-50%);
   }
-  header nav .navbar-collapse .nav-item {
-    width: 100%;
-  }
-  header nav .navbar-collapse .nav-item .nav-link {
-    color: white !important;
-    padding: 14px 0;
-    text-align: center;
-  }
-  header nav .navbar-collapse .nav-item .nav-link:hover {
+  header nav {
+    width: 96% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
-    color: black !important;
+    border-radius: 14px;
+    padding: 12px 16px;
+  }
+  header nav ul {
+    gap: 8rem !important;
+  }
+  header nav ul li {
+    font-size: 40px !important;
   }
   main section {
     padding: 20px;
